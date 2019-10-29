@@ -51,13 +51,10 @@ def y(cap,s):
 
 prod = y(k, z)
 
-#3)
-# Idk what's going on in this exercise
-agg_prod = sum(prod)
-capital = sum(k)
 
-#4)
-# I guess it's like picking k's to match a fixed order of z's in such order that the sum of y's will be maximal
+
+#3)
+# I assume it's like picking k's to match a fixed order of z's in such order that the sum of y's will be maximal
 #sort k, z from highest to lowest
 
 k_opt = np.array(sorted(k, reverse = True))
@@ -65,8 +62,14 @@ z_opt = np.array(sorted(z, reverse = True))
 
 prod_opt = y(k_opt, z_opt)
 agg_prod_opt = sum(prod_opt)
+capital_opt = sum(k_opt)
+
+#4)
+# Computing optimal association against the data
+k_atd = k_opt - k
 
 #5)
 # Reallocation problem
 
+agg_prod = sum(prod)
 prod_gain = (agg_prod_opt/agg_prod - 1) * 100
