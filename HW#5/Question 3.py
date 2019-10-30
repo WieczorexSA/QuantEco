@@ -16,8 +16,8 @@ import scipy as scp
 import time
 import random
 
-log_k = np.random.normal(1,1,10**4)
-log_z = np.random.normal(1,1,10**4)
+log_k = np.random.normal(-0.5,1,10**4)
+log_z = np.random.normal(-0.5,1,10**4)
 
 np.var(log_k)
 np.var(log_z)
@@ -52,8 +52,8 @@ N = 1000
 prod_change = []
 
 for i in range(N):
-    log_k = np.random.normal(1,1,10**4)
-    log_z = np.random.normal(1,1,10**4)
+    log_k = np.random.normal(-0.5,1,10**4)
+    log_z = np.random.normal(-0.5,1,10**4)
     k = np.exp(log_k)
     z = np.exp(log_z)
     prod = y(k, z)
@@ -75,8 +75,8 @@ prod_10k_std = np.std(prod_change)
 
 # 4 - Probability of 
 
-log_k = np.random.normal(1,1,10**7)
-log_z = np.random.normal(1,1,10**7)
+log_k = np.random.normal(-0.5,1,10**7)
+log_z = np.random.normal(-0.5,1,10**7)
 
 #iterate all the code above
 

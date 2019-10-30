@@ -23,7 +23,7 @@ random.seed(42693)
 # to generate variables
 ######################################################################
 
-mean = [1, 1]
+mean = [-0.5, -0.5]
 cov = [[1, 0], [0, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 
@@ -35,7 +35,8 @@ mpl.pyplot.show()
 
 k = np.exp(log_k)
 z = np.exp(log_z)
-
+mean_k = np.mean(k)
+mean_z = np.mean(z)
 # Plotting k,z in levels
 
 mpl.pyplot.scatter(k, z, s=1, color='blue')

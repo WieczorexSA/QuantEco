@@ -12,7 +12,7 @@ random.seed(42693)
 
 ##### Part 1 - no correlation
 
-mean = [1, 1]
+mean = [-0.5, -0.5]
 cov = [[1, 0], [0, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 
@@ -68,7 +68,7 @@ np.var(log_z)
 
 # 1)
 
-mean = [1, 1]
+mean = [-0.5, -0.5]
 cov = [[1, 0.5], [0.5, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 
@@ -124,7 +124,7 @@ np.var(log_z)
 
 # 1)
 
-mean = [1, 1]
+mean = [-0.5, -0.5]
 cov = [[1, -0.5], [-0.5, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 

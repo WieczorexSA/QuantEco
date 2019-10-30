@@ -27,7 +27,7 @@ random.seed(42693)
 # to generate variables
 ######################################################################
 
-mean = [1, 1]
+mean = [-0.5, =0.5]
 cov = [[1, 0.5], [0.5, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 
@@ -85,7 +85,7 @@ prod_gain = (agg_prod_opt/agg_prod - 1) * 100
 # to generate variables
 ######################################################################
 
-mean = [1, 1]
+mean = [-0.5, -0.5]
 cov = [[1, -0.5], [-0.5, 1]] #we need to have identity matrix as a variance-covariance matrix to assure no correlation
 log_k, log_z = np.random.multivariate_normal(mean, cov, 10**7).T
 
